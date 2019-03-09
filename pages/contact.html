@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Contact" content="Contact computer museum">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact</title>
+		<link rel="stylesheet" href="../styles/style.css">
+	</head>
+	<body>
+		<div id="banner">
+			<img src="../img/logo.png" alt="Computeur museum logo">
+		</div>
+		
+		<header>
+			<nav>
+				<ul>
+				<li><a href="../index.html">Accueil</a></li>
+				<li><a href="portfolio.html">Galerie</a></li>
+				<li><a href="history.html">Histoire</a></li>
+				<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main id="contact">
+			
+			<div id="form">
+			<h1>Contacter nous</h1>
+		
+			<fieldset>
+				<div class="txtb">
+					<label>Nom :</label>
+					<input type="text" name="nom" id="iptnom" autofocus placeholder="Nom">
+				</div>
+				
+				<div class="txtb">
+					<label>Prénom :</label>
+					<input type="text" name="prenom" id="iptprenom" placeholder="Prénom">
+				</div>
+				
+				<div class="txtb">
+					<label>Adresse mail :</label>
+					<input type="email" name="email" id="iptmail" minlength="10" maxlength="64" required placeholder="votremail@mail.com">
+				</div>
+				
+				<div class="txtb">
+					<label>Fichier :</label>
+					<input type="file" accept=".jpg,.png" id="iptfile" multiple>
+				</div>
+				
+				<div class="txtb">
+					<label>Messages :</label>
+					<textarea placeholder="Votre message..."></textarea>
+				</div>
+				
+			</fieldset>
+			
+			<div>
+				<input type="submit" value="Envoyer">
+			</div>
+			
+			</div>
+		
+		</main>
+		
+		<footer>
+			
+			<div class="foot">
+				<div class="logo">
+					<img src="../img/logo.png" alt="Computeur museum logo">
+					<p> &copy; 2019 Computer Museum</p>
+				</div>
+			</div>
+			
+			<div class="foot">
+				<p>En savoir plus :</p>
+				<ul>
+					<li><a href="#">F.A.Q</a></li>
+					<li><a href="../pages/rgpd.html">Vie privé</a></li>
+				</ul>
+			</div>
+			
+            <div class="foot">
+                <p>Nous suivre :</p>
+				<a href="#"><img src="../img/fb.png" alt="logo facebook"></a>
+				<a href="#"><img src="../img/twitter.png" alt="logo twitter"></a>
+				<a href="#"><img src="../img/reddit.png" alt="logo reddit"></a>
+            </div>
+			
+		</footer>
+	</body>
+</html>
