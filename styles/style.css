@@ -32,10 +32,10 @@ body, body *, body *:before, body *:after
 }
 #banner
 {
-background-image:url("../img/pc.jpg"),
-url("../img/pc2.jpg"),
-url("../img/pc3.jpg"),
-url("../img/pc.jpg");
+background-image:url("../img/PC.jpg"),
+url("../img/PC2.jpg"),
+url("../img/PC3.jpg"),
+url("../img/PC.jpg");
 background-repeat: no-repeat, no-repeat, no-repeat;
 background-size: 100vw;
 height:25vh;
