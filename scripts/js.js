@@ -16,24 +16,13 @@ function toggle(){
   	{
   		a[i].style.display="none";
   	}
-    /*a[0].style.display="none";
-    a[1].style.display="none";
-    a[2].style.display="none";
-    a[3].style.display="none";*/
   }
 
 }
 
-/*
-document.getElementsByClassName('menu')[0].style.display="none";
-document.getElementsByClassName('menu')[1].style.display="none";
-document.getElementsByClassName('menu')[2].style.display="none";
-document.getElementsByClassName('menu')[3].style.display="none";
-*/
-
 //Galerie
 
-function pictureHidden()
+function pictureHidden1()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[0].style.display=="block")
@@ -45,7 +34,7 @@ function pictureHidden()
     picHidden[0].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden2()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[1].style.display=="block")
@@ -57,7 +46,7 @@ function pictureHidden()
     picHidden[1].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden3()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[2].style.display=="block")
@@ -69,7 +58,7 @@ function pictureHidden()
     picHidden[2].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden4()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[3].style.display=="block")
@@ -81,7 +70,7 @@ function pictureHidden()
     picHidden[3].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden5()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[4].style.display=="block")
@@ -93,7 +82,7 @@ function pictureHidden()
     picHidden[4].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden6()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[5].style.display=="block")
@@ -105,7 +94,7 @@ function pictureHidden()
     picHidden[5].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden7()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[6].style.display=="block")
@@ -117,7 +106,7 @@ function pictureHidden()
     picHidden[6].style.display="block";
     }
 }
-function pictureHidden()
+function pictureHidden8()
 {
     var picHidden=document.getElementsByClassName("pictureHidden")
     if(picHidden[7].style.display=="block")
@@ -130,3 +119,49 @@ function pictureHidden()
     }
 }
 //Controle de formulaire
+
+var prenom = document.getElementById("iptprenom");
+var nom = document.getElementById("iptnom");
+var mail = document.getElementById("iptmail");
+var message = document.getElementById("iptmessage");
+var regEmail = /^[a-z0-9-_.]+@[a-z0-9-.]+.[a-z]{2,14}$/i;
+
+
+prenom.addEventListener('blur',controlePrenom);
+nom.addEventListener('blur',controleNom);
+mail.addEventListener('blur',controleMail);
+message.addEventListener('blur',controleMessage);
+
+function controlePrenom(){
+
+    if(prenom.value.length < 3 || prenom.value == "" || (!/[^a-zA-Z]/.test(prenom))){
+        prenom.style.backgroundColor="red";
+    }
+    else{
+        prenom.style.backgroundColor="green";
+    }
+}
+function controleNom (){
+    if(nom.value.length < 3 || nom.value == "" || (!/[^a-zA-Z]/.test(nom))){
+        nom.style.backgroundColor="red";
+    }
+    else{
+        nom.style.backgroundColor="green";
+    }
+}
+function controleMail (){
+    if(mail.value.length < 10 || mail.value == "" || (!regEmail.test(mail.value.trim()))){
+        mail.style.backgroundColor="red";
+    }
+    else{
+        mail.style.backgroundColor="green";
+    }
+}
+function controleMessage (){
+    if(message.value.length < 30 || message.value == ""){
+        message.style.backgroundColor="red";
+    }
+    else{
+        message.style.backgroundColor="green";
+    }
+}
