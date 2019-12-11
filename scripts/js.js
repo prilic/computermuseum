@@ -22,102 +22,24 @@ function toggle(){
 
 //Galerie
 
-function pictureHidden1()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[0].style.display=="block")
-    {
-    picHidden[0].style.display="none";
-    }
-    else
-    {
-    picHidden[0].style.display="block";
-    }
-}
-function pictureHidden2()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[1].style.display=="block")
-    {
-    picHidden[1].style.display="none";
-    }
-    else
-    {
-    picHidden[1].style.display="block";
-    }
-}
-function pictureHidden3()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[2].style.display=="block")
-    {
-    picHidden[2].style.display="none";
-    }
-    else
-    {
-    picHidden[2].style.display="block";
-    }
-}
-function pictureHidden4()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[3].style.display=="block")
-    {
-    picHidden[3].style.display="none";
-    }
-    else
-    {
-    picHidden[3].style.display="block";
-    }
-}
-function pictureHidden5()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[4].style.display=="block")
-    {
-    picHidden[4].style.display="none";
-    }
-    else
-    {
-    picHidden[4].style.display="block";
-    }
-}
-function pictureHidden6()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[5].style.display=="block")
-    {
-    picHidden[5].style.display="none";
-    }
-    else
-    {
-    picHidden[5].style.display="block";
-    }
-}
-function pictureHidden7()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[6].style.display=="block")
-    {
-    picHidden[6].style.display="none";
-    }
-    else
-    {
-    picHidden[6].style.display="block";
-    }
-}
-function pictureHidden8()
-{
-    var picHidden=document.getElementsByClassName("pictureHidden")
-    if(picHidden[7].style.display=="block")
-    {
-    picHidden[7].style.display="none";
-    }
-    else
-    {
-    picHidden[7].style.display="block";
-    }
-}
+    var mainPic =document.getElementsByClassName('mainPic');
+    var count= mainPic.length;
+    for(i=0;i<count;i++){
+        mainPic[i].addEventListener('click',function pictureHidden(){
+            var picHidden = document.getElementsByClassName('pictureHidden');
+            var count2 = picHidden.length;
+            for(j=0;j<count2;j++){
+                if(picHidden[i].style.display=='block'){
+                picHidden[i].style.display='none';
+                }
+                else{
+                picHidden[i].style.display='block';
+                }   
+            }
+
+        });
+    };
+
 //Controle de formulaire
 
 var prenom = document.getElementById("iptprenom");
